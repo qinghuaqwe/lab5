@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">lab5</string>
-    <string-array name="grid_array">
+    <string-array name="Color_1">
         <item>Azul</item>
         <item>Verde</item>
         <item>Negro</item>
@@ -9,4 +9,6 @@
         <item>Púrpura</item>
         <item>Cian</item>
     </string-array>
+
+
 </resources>

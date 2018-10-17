@@ -24,12 +24,15 @@ public class PaletteActivity extends Activity {
 
         gridview = findViewById(R.id.gridview);
 
-        final String [] colorname = getResources().getStringArray(R.array.grid_array);
-        
-        //Resources res = getResources();
-        //String[] grid_array = res.getStringArray(/*R.array.grid_array*/R.array.grid_array);
+        //final String [] color1 = getResources().getStringArray(R.array.Color_1);
+        //final String [] color2 = getResources().getStringArray(R.array.Color_2);
 
-        ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, colorname);
+        Resources res = getResources();
+        //String[] grid_array = res.getStringArray(/*R.array.grid_array*/R.array.Color_1);
+        final String [] color1 = res.getStringArray(R.array.Color_1);
+        final String [] color2 = res.getStringArray(R.array.Color_2);
+
+        ColorAdapter adapter = new ColorAdapter(PaletteActivity.this, color1, color2);
         gridview.setAdapter(adapter);
 
 

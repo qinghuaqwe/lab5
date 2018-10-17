@@ -9,6 +9,46 @@ import android.widget.TextView;
 public class ColorAdapter extends BaseAdapter {
     Context context;
     String myData[];
+    String myData2[];
+
+    public ColorAdapter(Context context, String myData[],String myData2[]){
+        this.context = context;
+        this.myData = myData;
+        this.myData2 = myData2;
+    }
+
+    @Override
+    public int getCount() {
+        return myData2.length;
+
+    }
+
+    /*public int getCount2(){
+        return myData1.length;
+    }*/
+
+    @Override
+    public Object getItem(int position) {
+        return myData2[position];
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        TextView textview = new TextView(context);
+        textview.setBackgroundColor(android.graphics.Color.parseColor(myData2[position]));
+        textview.setText(myData[position]);
+
+        return textview;
+    }
+
+    /*
+    Context context;
+    String myData[];
 
     public ColorAdapter(Context context, String myData[]){
         this.context = context;
@@ -38,4 +78,6 @@ public class ColorAdapter extends BaseAdapter {
 
         return textview;
     }
+    */
+
 }
